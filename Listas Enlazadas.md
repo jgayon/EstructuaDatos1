@@ -1,0 +1,33 @@
+#Listas Enlazadas
+##Metodos de las listas propias de Python:
+-list.append(x)
+Agrega un ítem al final de la lista.
+
+-list.extend(<ins>iterable<ins>)
+Extiende la lista agregándole todos los ítems del iterable.
+
+-list.insert(i, x)
+Inserta un ítem en una posición dada. 
+
+-list.remove(x)
+Quita el primer ítem de la lista cuyo valor sea x.
+
+-list.pop([i])
+Quita el ítem en la posición dada de la lista y lo retorna. Si no se especifica un índice, .pop() quita y retorna el último elemento de la lista. 
+
+-list.clear()
+Elimina todos los elementos de la lista.
+
+-list.index(x[, start[, end]])
+Retorna el índice basado en cero del primer elemento cuyo valor sea igual a x. 
+
+-list.count(x)
+Retorna el número de veces que x aparece en la lista.
+-list.sort()
+Ordena los elementos de la lista.
+
+-list.reverse()
+Invierte los elementos de la lista
+
+-list.copy()
+Retorna una copia superficial de la lista.
