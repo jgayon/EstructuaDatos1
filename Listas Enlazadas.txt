@@ -1,5 +1,7 @@
-#Listas Enlazadas
-##Metodos de las listas propias de Python:
+Listas Enlazadas
+
+Metodos de las listas propias de Python:
+
 -list.append(x)
 Agrega un ítem al final de la lista.
 
@@ -23,6 +25,7 @@ Retorna el índice basado en cero del primer elemento cuyo valor sea igual a x.
 
 -list.count(x)
 Retorna el número de veces que x aparece en la lista.
+
 -list.sort()
 Ordena los elementos de la lista.
 
