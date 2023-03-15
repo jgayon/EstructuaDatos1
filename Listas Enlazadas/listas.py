@@ -54,8 +54,3 @@ class linked_list:
             print(node.data, end =" => ")
             node = node.next
 
-s = linked_list()
-s.add_at_front(1)
-s.add_at_end(2)
-s.add_at_end(3)
-s.print_list()
