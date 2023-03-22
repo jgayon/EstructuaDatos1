@@ -67,11 +67,12 @@ class linked_list:
     #contar elementos
     def contar_elementos_unicos(lista):
         elementos_unicos = set()
-        nodo_actual = lista.primer_nodo
+        nodo_actual = lista.data
     
         while nodo_actual is not None:
-            elementos_unicos.add(nodo_actual.valor)
-            nodo_actual = nodo_actual.siguiente
+            elementos_unicos.add(nodo_actual.value)
+            nodo_actual = nodo_actual.next
     
         return len(elementos_unicos)
+
 
