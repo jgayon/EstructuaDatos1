@@ -1,5 +1,5 @@
 from listas import Node
-ef listas_semejantes (lista1, lista2):
+def listas_semejantes (lista1, lista2):
     # Convertir las listas enlazadas a listas simples
     list1 = []
     list2 = []
