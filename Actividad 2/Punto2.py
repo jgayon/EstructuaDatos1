@@ -1,42 +1,43 @@
 from listas import node
 
-def count_different_elements(head):
-    if not head:
-        return 0
 
-    current_node = head
-    different_elements = set([current_node.val])
+ 
+def elementos_diferentes(lista):
+   
+    elementos_unicos = set() # Crear un conjunto vacío para almacenar los elementos únicos
+    elementos_repetidos = {}
+    # Recorrer la lista enlazada
+    nodo_actual = lista
+    while nodo_actual is not None:
+        
+        if nodo_actual.valor not in elementos_unicos: # Si el valor del nodo actual no está en el conjunto de elementos únicos, agregarlo
+            elementos_unicos.add(nodo_actual.valor)
+        
+        else:
+            if nodo_actual.valor in elementos_repetidos: # Si el valor del nodo actual ya está en el conjunto de elementos únicos, agregarlo a la lista de elementos repetidos
+                elementos_repetidos[nodo_actual.valor] += 1
+            else:
+                elementos_repetidos[nodo_actual.valor] = 1
+        
+        nodo_actual = nodo_actual.siguiente
+   
+    print("Número total de elementos diferentes:", len(elementos_unicos))
+   
+    for elemento, repeticiones in elementos_repetidos.items():
+        print("Elementos que se repiten: ")
+        print(f"{elemento} (frecuencia: {repeticiones})")
 
-    while current_node.next:
-        current_node = current_node.next
-        if current_node.val not in different_elements:
-            different_elements.add(current_node.val)
+nodo1 = Nodo(5)
+nodo2 = Nodo(9)
+nodo3 = Nodo(8)
+nodo4 = Nodo(1)
+nodo5 = Nodo(5)
+nodo1.siguiente = nodo2
+nodo2.siguiente = nodo3
+nodo3.siguiente = nodo4
+nodo4.siguiente = nodo5
+lista_enlazada = nodo1
 
-    return len(different_elements)
-
-# Ejemplo de lista enlazada
-head = Node(3)
-head.next = Node(4)
-head.next.next = Node(5)
-head.next.next.next = Node(4)
-head.next.next.next.next = Node(6)
-head.next.next.next.next.next = Node(3)
-head.next.next.next.next.next.next = Node(2)
-head.next.next.next.next.next.next.next = Node(7)
-head.next.next.next.next.next.next.next.next = Node(5)
-
-# Contar los elementos diferentes en la lista
-num_different = count_different_elements(head)
-print("El número total de elementos diferentes en la lista es:", num_different)
-
-# Imprimir los elementos diferentes
-current_node = head
-different_elements = set([current_node.val])
-while current_node.next:
-    current_node = current_node.next
-    if current_node.val not in different_elements:
-        different_elements.add(current_node.val)
-
-print("Los elementos diferentes en la lista son:", different_elements)
+elementos_diferentes(lista_enlazada)
 
 
