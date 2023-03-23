@@ -3,16 +3,16 @@ from listas import node
 
  
 def elementos_diferentes(lista):
-   # Crear un conjunto vacío para almacenar los elementos únicos
+   
     elementos_unicos = set() 
     elementos_repetidos = {}
     # Recorrer la lista enlazada
     node_actual = lista
     while node_actual is not None:
-        # Si el valor del nodo actual no está en el conjunto de elementos únicos, agregarlo
+        
         if node_actual.valor not in elementos_unicos: 
             elementos_unicos.add(node_actual.valor)
-        # Si el valor del nodo actual ya está en el conjunto de elementos únicos, agregarlo a la lista de elementos repetidos
+        
         else:
             if node_actual.valor in elementos_repetidos: 
                 elementos_repetidos[node_actual.valor] += 1
