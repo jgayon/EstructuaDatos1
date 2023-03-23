@@ -3,23 +3,23 @@ from listas import node
 
  
 def elementos_diferentes(lista):
-   
-    elementos_unicos = set() # Crear un conjunto vacío para almacenar los elementos únicos
+   # Crear un conjunto vacío para almacenar los elementos únicos
+    elementos_unicos = set() 
     elementos_repetidos = {}
     # Recorrer la lista enlazada
-    nodo_actual = lista
-    while nodo_actual is not None:
-        
-        if nodo_actual.valor not in elementos_unicos: # Si el valor del nodo actual no está en el conjunto de elementos únicos, agregarlo
-            elementos_unicos.add(nodo_actual.valor)
-        
+    node_actual = lista
+    while node_actual is not None:
+        # Si el valor del nodo actual no está en el conjunto de elementos únicos, agregarlo
+        if node_actual.valor not in elementos_unicos: 
+            elementos_unicos.add(node_actual.valor)
+        # Si el valor del nodo actual ya está en el conjunto de elementos únicos, agregarlo a la lista de elementos repetidos
         else:
-            if nodo_actual.valor in elementos_repetidos: # Si el valor del nodo actual ya está en el conjunto de elementos únicos, agregarlo a la lista de elementos repetidos
-                elementos_repetidos[nodo_actual.valor] += 1
+            if node_actual.valor in elementos_repetidos: 
+                elementos_repetidos[node_actual.valor] += 1
             else:
-                elementos_repetidos[nodo_actual.valor] = 1
+                elementos_repetidos[node_actual.valor] = 1
         
-        nodo_actual = nodo_actual.siguiente
+        node_actual = node_actual.siguiente
    
     print("Número total de elementos diferentes:", len(elementos_unicos))
    
@@ -27,16 +27,16 @@ def elementos_diferentes(lista):
         print("Elementos que se repiten: ")
         print(f"{elemento} (frecuencia: {repeticiones})")
 
-nodo1 = Nodo(5)
-nodo2 = Nodo(9)
-nodo3 = Nodo(8)
-nodo4 = Nodo(1)
-nodo5 = Nodo(5)
-nodo1.siguiente = nodo2
-nodo2.siguiente = nodo3
-nodo3.siguiente = nodo4
-nodo4.siguiente = nodo5
-lista_enlazada = nodo1
+node1 = Node(5)
+node2 = Node(9)
+node3 = Node(8)
+node4 = Node(1)
+node5 = Node(5)
+nodo1.siguiente = node2
+nodo2.siguiente = node3
+nodo3.siguiente = node4
+nodo4.siguiente = node5
+lista_enlazada = node1
 
 elementos_diferentes(lista_enlazada)
 
