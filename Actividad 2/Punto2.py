@@ -6,7 +6,7 @@ def elementos_diferentes(lista):
    
     elementos_unicos = set() 
     elementos_repetidos = {}
-    # Recorrer la lista enlazada
+   
     node_actual = lista
     while node_actual is not None:
         
